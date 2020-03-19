@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+    <script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+	<div id="mainDiv">
+		<div id="content">
+			<div id="code">
+				<span class="comments">/**</span><br />
+				<span class="space"/><span class="comments">* SUGENG DALU,</span><br />
+				<span class="space"/><span class="comments">* Denny Caknan. </span><br />
+				<span class="space"/><span class="comments">*/</span><br />
+				Sugeng dalu<br /> <span class="keyword">Ati seng biyen tau ngelarani</span> <br />Wes suwe we ra rene<br />(<span class="string">"We lungo mung masalah sepele <br />We golek liane"</span>);<br />
+				Tambah loro<br /> <span class="keyword">Yakin we teko nambahi sengsoro</span><br /> Ngrusak tatanan ati seng wes pengen lali <br />(<span class="string">"Karo gedhe duwure balungan mu"</span>);<br />
+				<span class="comments">// Aku wes ora gagas kata luka</span><br />
+				Wes cukup wingi rapengen mbaleni;<br />
+				<span class="comments">// Mario leh mu dolanan ati<br />
+				u.accepted();<br />
+				<span class="comments">// Wes wayahe we kapok mblenjani</span><br />
+				;<br />
+				<span class="comments">// Udan tangise ati</span><br />
+				Saiki wes rodo terang;<br />
+				<span class="comments">// Masio isih kadang kelingan<br />
+Kowe seng tak sayang sayang</span><br />
+				<span class="comments">// Saiki mung crito loro</span><br />
+				<span class="keyword">Mpun kadung mbekas ning dodo</span> <br />Perihe ati seng mbok paringi <span class="keyword"></span>;<br />
+				<span class="keyword">Wes cukup ra bakal tak baleni</span><br />
+				<span class="placeholder"/>
+				<span class="placeholder"/><span class="comments">// We arep neng ndi to</span><br />
+				<span class="placeholder"/><span class="comments">// Ojo ngalih, aku pengen balik karo kowe
+</span><br />
+				<span class="placeholder"/>Wis cukup, aku pamit;<br />
+				<span class="comments">// Perihe ati seng mbok paringi</span><br />
+				Ora tak baleni.<br />
+			</div>
+			<div id="loveHeart">
+				<canvas id="garden"></canvas>
+				<div id="words">
+					<div id="messages">
+						Made on :
+						<div id="elapseClock"></div>
+					</div>
+					<div id="loveu">
+						Created by:<br/>
+						<div class="signature">- @Dulbjn</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="copyright">
+			Inspired by <a href="http://www.openrise.com/lab/FlowerPower/">FlowerPower</a> project.<br />
+			Copyright © 2014 <a href='http://www.blogsgoblog.com'>Blogs Goblog</a> 2014-2020
+		</div>
+	</div>
+	<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2020, 03, 2);
+		together.setHours(20);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+		    document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+	</script>
+</body>
+</html>
